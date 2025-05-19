@@ -62,7 +62,6 @@
             const c = parseFloat(document.getElementById('c').value);
             const resultDiv = document.getElementById('result');
 
-            // Проверка ввода
             if (isNaN(a) || isNaN(b) || isNaN(c)) {
                 resultDiv.innerHTML = '<div class="error">Введите все коэффициенты!</div>';
                 return;
@@ -72,7 +71,6 @@
                 return;
             }
 
-            // Расчёт дискриминанта
             const D = b * b - 4 * a * c;
             let roots = [];
 
@@ -85,7 +83,6 @@
                 roots.push(x.toFixed(2));
             }
 
-            // Вывод результата
             let output = `<strong>Уравнение:</strong> ${a}x² + ${b}x + ${c} = 0<br>`;
             output += `<strong>Дискриминант (D):</strong> ${D.toFixed(2)}<br>`;
             
